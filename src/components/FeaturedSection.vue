@@ -1,39 +1,46 @@
 <script setup>
 const featuredItems = [
-  { id: 1, title: "Naruto Sketch" },
-  { id: 2, title: "Attack on Titan Cel" },
-  { id: 3, title: "Spirited Away Genga" },
+  {
+    id: 1,
+    title: "Naruto Sketch",
+    anime: "Naruto",
+    image: "https://via.placeholder.com/600x400",
+  },
+  {
+    id: 2,
+    title: "Attack on Titan Cel",
+    anime: "Attack on Titan",
+    image: "https://via.placeholder.com/600x400",
+  },
+  {
+    id: 3,
+    title: "Spirited Away Genga",
+    anime: "Spirited Away",
+    image: "https://via.placeholder.com/600x400",
+  },
 ];
 </script>
 
 <template>
-  <section>
-    <h2>Recently Added</h2>
+  <section class="mt-10">
+    <h2 class="text-2xl font-bold mb-6">Recently Added</h2>
 
-    <div class="grid">
-      <div v-for="item in featuredItems" :key="item.id" class="card">
-        <p>{{ item.title }}</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div
+        v-for="item in featuredItems"
+        :key="item.id"
+        class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-[1.02] bg-white"
+      >
+        <img :src="item.image" class="w-full h-48 object-cover" />
+        <div class="p4">
+          <h3 class="font-semibold text-lg">
+            {{ item.title }}
+          </h3>
+          <p class="text-sm text-gray-500">
+            {{ item.anime }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-section {
-  margin-top: 2rem;
-}
-
-h2 {
-  margin-bottom: 1rem;
-}
-
-.grid {
-  display: flex;
-  gap: 1rem;
-}
-
-.card {
-  padding: 1rem;
-  border: 1px solid #ccc;
-}
-</style>

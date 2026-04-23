@@ -3,45 +3,19 @@ import FeaturedSection from "../components/FeaturedSection.vue";
 </script>
 
 <template>
-  <div class="home">
-    <section class="hero">
-      <h1>Welcome to Anime Art Archive</h1>
-      <p>
+  <div class="px-6 py-10">
+    <section class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Anime Art Archive</h1>
+      <p class="max-w-xl mx-auto text-gray-600">
         Explore curated anime art collections, showcase your own pieces, and
         connect with a growing community of collectors and fans.
       </p>
-      <button>Browse Galleries</button>
+      <button
+        class="mt-6 px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700"
+      >
+        Browse Galleries
+      </button>
     </section>
     <FeaturedSection />
   </div>
 </template>
-
-<style scoped>
-.home {
-  padding: 1rem;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.hero h1 {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.hero button {
-  margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-}
-
-.hero button:hover {
-  background-color: #555;
-}
-</style>

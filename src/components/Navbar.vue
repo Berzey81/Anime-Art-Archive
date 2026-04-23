@@ -1,41 +1,21 @@
 <script setup></script>
 
 <template>
-  <nav>
-    <div class="links">
-      <h1>Anime Art Archive</h1>
-      <router-link to="/">Home</router-link>
-      <router-link to="/marketplace">Marketplace</router-link>
-      <router-link to="/profile">Profile</router-link>
+  <nav
+    class="flex items-center justify-between px-6 py-4 bg-gray-900 text-white"
+  >
+    <h1 class="text-xl font-bold">Anime Art Archive</h1>
+
+    <div class="flex gap-6">
+      <router-link to="/" class="hover:text-gray-300"> Home </router-link>
+
+      <router-link to="/marketplace" class="hover:text-gray-300">
+        Marketplace
+      </router-link>
+
+      <router-link to="/profile" class="hover:text-gray-300">
+        Profile
+      </router-link>
     </div>
   </nav>
 </template>
-
-<style scoped>
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #222;
-  color: white;
-}
-
-nav h1 {
-  color: white;
-}
-
-/* router-link renders as <a> */
-nav a {
-  margin-left: 1rem;
-  color: white;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-.links {
-  display: flex;
-  gap: 1rem;
-}
-</style>

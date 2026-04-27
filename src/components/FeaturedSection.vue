@@ -26,13 +26,14 @@ const featuredItems = [
     <h2 class="text-2xl font-bold mb-6">Recently Added</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div
+      <router-link
         v-for="item in featuredItems"
         :key="item.id"
-        class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-[1.02] bg-white"
+        :to="`/art/${item.id}`"
+        class="block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-[1.02] bg-white"
       >
         <img :src="item.image" class="w-full h-48 object-cover" />
-        <div class="p4">
+        <div class="p-4">
           <h3 class="font-semibold text-lg">
             {{ item.title }}
           </h3>
@@ -40,7 +41,7 @@ const featuredItems = [
             {{ item.anime }}
           </p>
         </div>
-      </div>
+      </router-link>
     </div>
   </section>
 </template>

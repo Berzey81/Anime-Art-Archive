@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.nav-link {
+  @apply text-gray-300 hover:text-indigo-400 transition;
+}
+
+.active {
+  @apply text-indigo-400 font-semibold;
+}
+
+.card {
+  @apply rounded-lg overflow-hidden bg-gray-900 shadow-md hover:shadow-xl transition transform hover:scale-[1.02];
+}

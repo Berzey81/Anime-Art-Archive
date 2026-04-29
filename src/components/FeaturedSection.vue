@@ -30,7 +30,7 @@ const featuredItems = [
         v-for="item in featuredItems"
         :key="item.id"
         :to="`/art/${item.id}`"
-        class="block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:scale-[1.02] bg-white"
+        class="card"
       >
         <img :src="item.image" class="w-full h-48 object-cover" />
         <div class="p-4">

@@ -10,6 +10,11 @@ const routes = [
   { path: "/marketplace", component: MarketplaceView },
   { path: "/profile", component: ProfileView },
   { path: "/art/:id", component: ArtDetailView },
+  // {
+  //   path: "/profile/:category",
+  //   name: "category-view",
+  //   component: CategoryView,
+  // },
 ];
 
 const router = createRouter({

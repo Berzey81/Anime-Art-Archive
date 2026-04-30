@@ -1,20 +1,14 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-    <footer>
-        <p>
-            All images belong to their respective owners. Do not use without permission.
-        </p>
-    </footer>
+  <footer class="footer">
+    <div class="mx-w-6xl mx-auto px-6 py-6 text-center text-sm text-gray-400">
+      <p class="mb-2">© 2026 Anime Art Archive</p>
+      <p>
+        All artwork displayed on this platform is the property of their
+        respective owners. Users are responsible for the content they upload. Do
+        not reproduce or use images without permission.
+      </p>
+    </div>
+  </footer>
 </template>
-
-<style scoped>
-footer {
-    text-align: center; 
-    padding: 1rem;
-    background-color: #eee;
-    margin-top: 2rem;
-}
-</style>

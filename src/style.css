@@ -11,3 +11,7 @@
 .card {
   @apply rounded-lg overflow-hidden bg-gray-900 shadow-md hover:shadow-xl transition transform hover:scale-[1.02];
 }
+
+.footer {
+  @apply bg-gray-900 border-t border-gray-800 mt-10;
+}

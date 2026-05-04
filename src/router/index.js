@@ -4,17 +4,18 @@ import HomeView from "../views/HomeView.vue";
 import MarketplaceView from "../views/MarketplaceView.vue";
 import ProfileView from "../views/ProfileView.vue";
 import ArtDetailView from "../views/ArtDetailView.vue";
+import CategoryView from "../views/CategoryView.vue";
 
 const routes = [
   { path: "/", component: HomeView },
   { path: "/marketplace", component: MarketplaceView },
   { path: "/profile", component: ProfileView },
   { path: "/art/:id", component: ArtDetailView },
-  // {
-  //   path: "/profile/:category",
-  //   name: "category-view",
-  //   component: CategoryView,
-  // },
+  {
+    path: "/profile/:category",
+    name: "category-view",
+    component: CategoryView,
+  },
 ];
 
 const router = createRouter({

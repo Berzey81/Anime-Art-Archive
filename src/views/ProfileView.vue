@@ -1,24 +1,13 @@
 <script setup>
+import { items } from "../data/artData";
+import { formatCategory } from "../utils/format";
+
 const gallery = {
   name: "Amber's Collection",
   banner: "https://via.placeholder.com/1200x300",
-  categories: ["Naruto", "Attack on Titan", "Spirited Away"],
 };
 
-const items = [
-  {
-    id: 1,
-    title: "Naruto Sketch",
-    anime: "Naruto",
-    image: "https://via.placeholder.com/600x400",
-  },
-  {
-    id: 2,
-    title: "Attack on Titan Cel",
-    anime: "Attack on Titan",
-    image: "https://via.placeholder.com/600x400",
-  },
-];
+const categories = [...new Set(items.map((item) => item.anime))];
 </script>
 
 <template>
@@ -36,12 +25,12 @@ const items = [
     <!-- Categories -->
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
       <router-link
-        v-for="category in gallery.categories"
+        v-for="category in categories"
         :key="category"
         :to="`/profile/${category.toLowerCase()}`"
         class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition"
       >
-        {{ category }}
+        {{ formatCategory(category) }}
       </router-link>
     </div>
 

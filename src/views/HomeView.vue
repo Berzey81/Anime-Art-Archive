@@ -1,4 +1,5 @@
 <script setup>
+import { formatCategory } from "../utils/format";
 import FeaturedSection from "../components/FeaturedSection.vue";
 </script>
 

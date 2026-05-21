@@ -4,7 +4,8 @@ import { formatCategory } from "../utils/format";
 import ArtworkCard from "../components/ArtworkCard.vue";
 
 const route = useRoute();
-const category = route.params.category;
+const username = route.params.username;
+const categorySlug = route.params.slug;
 
 // Mock data for category view
 const items = [
@@ -23,7 +24,7 @@ const items = [
 ];
 
 // Filter items based on category
-const filteredItems = items.filter((item) => item.anime === category);
+const filteredItems = items.filter((item) => item.anime === categorySlug);
 </script>
 
 <template>

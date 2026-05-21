@@ -16,6 +16,10 @@ const routes = [
     name: "category-view",
     component: CategoryView,
   },
+  {
+    path: "/gallery/:username/:slug",
+    component: () => import("../views/CategoryView.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -1,13 +1,11 @@
 <script setup>
 import { items } from "../data/artData";
 import { formatCategory } from "../utils/format";
+import { galleries } from "../data/galleryData";
 
-const gallery = {
-  name: "Amber's Collection",
-  banner: "https://via.placeholder.com/1200x300",
-};
+const gallery = galleries[0];
 
-const categories = [...new Set(items.map((item) => item.anime))];
+const categories = gallery.categories;
 </script>
 
 <template>
@@ -26,11 +24,11 @@ const categories = [...new Set(items.map((item) => item.anime))];
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
       <router-link
         v-for="category in categories"
-        :key="category"
-        :to="`/profile/${category.toLowerCase()}`"
+        :key="category.slug"
+        :to="`/gallery/${gallery.username}/${category.slug}`"
         class="bg-gray-900 p-4 rounded-lg text-center hover:bg-gray-800 transition"
       >
-        {{ formatCategory(category) }}
+        {{ category.title }}
       </router-link>
     </div>
 

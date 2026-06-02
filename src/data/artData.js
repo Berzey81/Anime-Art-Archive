@@ -9,15 +9,33 @@ export const items = [
   {
     id: 2,
     title: "Attack on Titan Cel",
-    anime: "attack on titan",
+    anime: "attack-on-titan",
     image: "https://via.placeholder.com/600x400",
     description: "Production cel from Attack on Titan.",
   },
   {
     id: 3,
     title: "Spirited Away Genga",
-    anime: "spirited away",
+    anime: "spirited-away",
     image: "https://via.placeholder.com/600x400",
     description: "Hand-drawn genga from Spirited Away.",
+  },
+];
+
+export const marketplaceItems = [
+  {
+    id: 101,
+    title: "Naruto Sketch (Original)",
+    anime: "naruto",
+    image: "https://via.placeholder.com/600x400",
+    
+    price: 45,
+    currency: "USD",
+    
+    seller: "amber",
+    
+    forSale: true,
+    
+    description: "Original sketch available for purchase.",
   },
 ];

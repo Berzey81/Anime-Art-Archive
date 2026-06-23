@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { formatCategory } from "../utils/format";
-import ArtworkCard from "../components/ArtworkCard.vue";
+import AppCard from "../components/AppCard.vue";
 import { items } from "../data/artData";
 
 const route = useRoute();
@@ -20,7 +20,12 @@ const filteredItems = items.filter((item) => item.anime === categorySlug);
       {{ formatCategory(categorySlug) }}
     </h1>    
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <ArtworkCard v-for="item in filteredItems" :key="item.id" :item="item" />
+      <AppCard
+      v-for="item in items"
+      :key="item.id"
+      :item="item"
+      variant="gallery"
+      />
     </div>
   </div>
 </template>

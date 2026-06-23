@@ -1,6 +1,6 @@
 <script setup>
 import { marketplaceItems } from "../data/marketplaceData";
-import MarketplaceCard from "../components/MarketplaceCard.vue";
+import AppCard from "../components/AppCard.vue";
 </script>
 
 <template>
@@ -15,10 +15,11 @@ import MarketplaceCard from "../components/MarketplaceCard.vue";
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <MarketplaceCard
-        v-for="item in marketplaceItems"
-        :key="item.id"
-        :item="item"
+      <AppCard
+      v-for="item in marketplaceItems"
+      :key="item.id"
+      :item="item"
+      variant="marketplace"
       />
     </div>
   </div>

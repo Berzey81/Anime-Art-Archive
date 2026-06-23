@@ -5,6 +5,7 @@ export const items = [
     anime: "naruto",
     image: "https://via.placeholder.com/600x400",
     description: "A rough genga sketch from Naruto.",
+    featured: true,
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const items = [
     anime: "attack-on-titan",
     image: "https://via.placeholder.com/600x400",
     description: "Production cel from Attack on Titan.",
+    featured: false,
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const items = [
     anime: "spirited-away",
     image: "https://via.placeholder.com/600x400",
     description: "Hand-drawn genga from Spirited Away.",
+    featured: true,
   },
 ];
 
@@ -28,14 +31,14 @@ export const marketplaceItems = [
     title: "Naruto Sketch (Original)",
     anime: "naruto",
     image: "https://via.placeholder.com/600x400",
-    
+
     price: 45,
     currency: "USD",
-    
+
     seller: "amber",
-    
+
     forSale: true,
-    
+
     description: "Original sketch available for purchase.",
   },
 ];

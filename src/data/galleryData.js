@@ -9,20 +9,5 @@ export const galleries = [
       card: "bg-gray-900",
       accent: "text-purple-400",
     },
-
-    categories: [
-      {
-        slug: "naruto",
-        title: "Naruto",
-      },
-      {
-        slug: "attack-on-titan",
-        title: "Attack On Titan",
-      },
-      {
-        slug: "spirited-away",
-        title: "Spirited Away",
-      },
-    ],
   },
 ];

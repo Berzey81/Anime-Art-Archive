@@ -40,6 +40,18 @@ const filteredItems = computed(() => {
     <!-- Categories -->
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       <button
+        @click="activeCategory = null"
+        class="p-4 rounded-lg text-center transition"
+        :class="
+          activeCategory === null
+            ? 'bg-purple-600 text-white'
+            : 'bg-gray-900 hover:bg-gray-800 text-white'
+        "
+      >
+        All ({{ items.length }})
+      </button>
+      
+      <button
         v-for="category in categories"
         :key="category.slug"
         @click="activeCategory = category.slug"
@@ -53,15 +65,15 @@ const filteredItems = computed(() => {
         {{ category.title }} ({{ category.count }})
       </button>
     </div>
-  </div>
 
-  <!-- Artwork Grid-->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-    <AppCard
-      v-for="item in filteredItems"
-      :key="item.id"
-      :item="item"
-      variant="gallery"
-    />
+    <!-- Artwork Grid-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+      <AppCard
+        v-for="item in filteredItems"
+        :key="item.id"
+        :item="item"
+        variant="gallery"
+      />
+    </div>
   </div>
 </template>

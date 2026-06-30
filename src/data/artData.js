@@ -6,7 +6,14 @@ export const items = [
     image: "https://via.placeholder.com/600x400",
     description: "A rough genga sketch from Naruto.",
     featured: true,
+
+    studio: "Studio Pierrot",
+    mediaType: "Genga",
+    year: 2004,
+
+    tags: ["Naruto", "Team 7", "Sasuke", "Original Drawing"],
   },
+
   {
     id: 2,
     title: "Attack on Titan Cel",
@@ -14,7 +21,14 @@ export const items = [
     image: "https://via.placeholder.com/600x400",
     description: "Production cel from Attack on Titan.",
     featured: false,
+
+    studio: "Wit Studio",
+    mediaType: "Cel",
+    year: 2013,
+
+    tags: ["Attack Titan", "Scout Regiment", "Levi", "Production Cel"],
   },
+
   {
     id: 3,
     title: "Spirited Away Genga",
@@ -22,23 +36,11 @@ export const items = [
     image: "https://via.placeholder.com/600x400",
     description: "Hand-drawn genga from Spirited Away.",
     featured: true,
-  },
-];
 
-export const marketplaceItems = [
-  {
-    id: 101,
-    title: "Naruto Sketch (Original)",
-    anime: "naruto",
-    image: "https://via.placeholder.com/600x400",
+    studio: "Studio Ghibli",
+    mediaType: "Genga",
+    year: 2001,
 
-    price: 45,
-    currency: "USD",
-
-    seller: "amber",
-
-    forSale: true,
-
-    description: "Original sketch available for purchase.",
+    tags: ["Chihiro", "Haku", "Spirited Away", "Original Drawing"],
   },
 ];

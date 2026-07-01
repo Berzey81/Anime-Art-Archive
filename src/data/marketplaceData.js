@@ -1,9 +1,7 @@
 export const marketplaceItems = [
   {
     id: 101,
-    title: "Naruto Original Sketch",
-    anime: "naruto",
-    image: "https://via.placeholder.com/600x400",
+    itemId: 1,
     price: 45,
     currency: "USD",
     seller: "amber",
@@ -11,9 +9,7 @@ export const marketplaceItems = [
   },
   {
     id: 102,
-    title: "Attack on Titan Cel",
-    anime: "attack-on-titan",
-    image: "https://via.placeholder.com/600x400",
+    itemId: 2,
     price: 120,
     currency: "USD",
     seller: "amber",

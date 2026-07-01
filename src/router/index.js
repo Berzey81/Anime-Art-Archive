@@ -8,7 +8,7 @@ import ArtDetailView from "../views/ArtDetailView.vue";
 const routes = [
   { path: "/", component: HomeView },
   { path: "/marketplace", component: MarketplaceView },
-  { path: "/profile", component: ProfileView },
+  { path: "/profile/:username", component: ProfileView },
   { path: "/art/:id", component: ArtDetailView },
   {
     path: "/gallery/:username/:slug",
